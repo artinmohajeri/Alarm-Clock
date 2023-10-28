@@ -8,6 +8,7 @@ let userMinute
 let userSecond
 let userMusic
 
+// this code is for showing the top clock.
 setInterval(() => {
     date = new Date;
     houre = date.getHours();
@@ -29,7 +30,7 @@ setInterval(() => {
 }, 1000);
 
 
-
+// cheks if the real time is equal with the user input time. so it rings!
 document.querySelector("#set").addEventListener("click", function () {
     document.querySelector(".form-box").classList.remove("d-none");
 
@@ -67,6 +68,8 @@ document.querySelector("#set").addEventListener("click", function () {
 
 });
 
+
+// reloading the page if you click on refresh button
 document.querySelector("#refresh").addEventListener("click",function(){
     location.reload()
 })
