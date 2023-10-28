@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alarm</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            height: 100vh;
+        }
+
+        .clock-box {
+            height: 200px;
+        }
+
+        .clock-box div {
+            max-width: 10%;
+            font-size: 50px;
+        }
+        .row{
+            width: 500px;
+        }
+
+    </style>
+</head>
+
+<body class="bg-black m-0 p-0 text-light">
+    <div class="clock-box w-100 d-flex align-items-center justify-content-center">
+
+        <div class="houre h-100 d-flex justify-content-center align-items-center ms-2"></div>
+        <div class="minute h-100 d-flex justify-content-center align-items-center ms-2"></div>
+        <div class="second h-100 d-flex justify-content-center align-items-center ms-2"></div>
+    </div>
+    <div class="button w-100 d-flex justify-content-center">
+        <button id="set" type="button" class="btn btn-primary">Set Time</button>
+    </div>
+    <div class="form-box h-50 w-100 d-none">
+
+        <form class="d-flex justify-content-center mt-5">
+            <div class="row">
+              <div class="col">
+                <input type="number" class="form-control" placeholder="Houre..." name="houre">
+              </div>
+              <div class="col">
+                <input type="number" class="form-control" placeholder="Minute..." name="minute">
+              </div>
+              <div class="col">
+                <input type="number" class="form-control" placeholder="Second" name="second">
+              </div>
+            </div>
+          </form>
+          <div class="audio-input w-100 d-flex justify-content-center">
+            <input type="file" class="form-control w-25 mt-5" title="select your alarm music" placeholder="Select an audio file" accept="audio/*">
+          </div>
+          <div class="submit d-100 d-flex justify-content-center mt-5">
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </div>
+
+    </div>
+    <div class="alert alert-success w-25 text-center m-auto mb-5 d-none"><strong>Your alarm is souning!!!<button id="refresh" type="btn" class="btn btn-info ms-4">Refresh</button></strong></div>
+    <audio src="" class="d-none" id="audioPlayer"></audio>
+    <script src="alarm.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
